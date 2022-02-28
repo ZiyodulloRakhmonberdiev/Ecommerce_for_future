@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+/* Header content */
+.main-content {
+  margin: auto;
+  max-width: 1920px;
+  position: relative;
+  background-image: url(https://res.cloudinary.com/idaproject/image/upload/v1645562388/bg_qmgaze.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  width: 100% !important;
+  height: 80vh;
+}
+
+/* Media query for big monitors */
+@media (min-width: 1480px){
+  .main-content{
+    height: 60vh;
+  }
+}
+.filter::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.4);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.card-title{
+  font-weight: 500;
+  font-size: 18px;
+}
+.filter-content{
+  display: flex;
+  justify-content: center;
+}
+.book-list{
+  margin: auto;
+  max-width: 1920px;
+}
+
+/* Media query for tablets */
+@media (max-width: 1025px){
+  .main-image{
+    padding-bottom: 1rem;
+  }
+  .filter-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Sorting select input */
+  .filter-content .relevance{
+    margin-top: 30px;
+  }
+}
+/* Media query for mobile devices*/
+@media (max-width: 576px){
+  .filter-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
